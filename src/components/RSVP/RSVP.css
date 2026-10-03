@@ -1,0 +1,109 @@
+.rsvp {
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 20px;
+
+  background-color: #f5eee4;
+  color: #4b382f;
+}
+
+.rsvp__content {
+  width: 100%;
+  max-width: 600px;
+
+  text-align: center;
+}
+
+.rsvp__subtitle {
+  margin: 0 0 20px;
+
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.rsvp__title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 7vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.rsvp__text {
+  margin: 30px 0 50px;
+
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.rsvp__form {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.rsvp__form label {
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.rsvp__form input,
+.rsvp__form select {
+  width: 100%;
+
+  padding: 14px 0;
+  margin-bottom: 30px;
+
+  border: none;
+  border-bottom: 1px solid #d8c5ae;
+
+  outline: none;
+
+  background-color: transparent;
+  color: #4b382f;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+}
+
+.rsvp__form input::placeholder {
+  color: #8b7a6e;
+}
+
+.rsvp__form input:focus,
+.rsvp__form select:focus {
+  border-bottom-color: #4b382f;
+}
+
+.rsvp__form button {
+  align-self: center;
+
+  padding: 14px 35px;
+
+  border: 1px solid #4b382f;
+
+  background-color: transparent;
+  color: #4b382f;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rsvp__form button:hover {
+  background-color: #4b382f;
+  color: #f5eee4;
+}

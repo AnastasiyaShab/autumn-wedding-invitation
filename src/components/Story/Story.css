@@ -1,0 +1,82 @@
+.story {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  padding: 120px 60px;
+
+  background-color: #f5eee4;
+  color: #4b382f;
+}
+
+/* Фотографии */
+
+.story__photos {
+  position: relative;
+
+  width: 45%;
+  height: 600px;
+}
+
+.story__photo {
+  position: absolute;
+
+  object-fit: cover;
+
+  border: 1px solid #d8c5ae;
+}
+
+.story__photo--first {
+  width: 62%;
+  height: 430px;
+
+  top: 0;
+  left: 0;
+}
+
+.story__photo--second {
+  width: 62%;
+  height: 430px;
+
+  right: 0;
+  bottom: 0;
+}
+
+/* Текст */
+
+.story__content {
+  width: 40%;
+
+  text-align: center;
+}
+
+.story__subtitle {
+  margin: 0 0 20px;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.story__title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 7vw, 72px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.story__text {
+  max-width: 550px;
+
+  margin: 30px auto 0;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+}
