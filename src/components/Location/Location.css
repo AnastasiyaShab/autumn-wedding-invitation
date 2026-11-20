@@ -106,3 +106,73 @@
 
   border: 1px solid #d8c5ae;
 }
+
+/* телефон */
+
+@media (max-width: 767px) {
+  .location {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .location__content {
+    width: 100%;
+
+    padding: 80px 20px;
+  }
+
+  .location__subtitle {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .location__title {
+    font-size: clamp(48px, 15vw, 64px);
+  }
+
+  .location__text {
+    margin: 25px 0 40px;
+
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .location__address {
+    margin-bottom: 35px;
+  }
+
+  .location__address h3 {
+    font-size: 27px;
+  }
+
+  .location__address p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .location__button {
+    padding: 13px 24px;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .location__image {
+    width: 100%;
+
+    height: 60vh;
+
+    padding: 20px;
+  }
+
+  .location__image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+}

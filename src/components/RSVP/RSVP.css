@@ -1,11 +1,14 @@
+/* изменение высоты блока */
 .rsvp {
-  min-height: 90vh;
+  margin-top: -60px;
+
+  min-height: auto;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
-  padding: 100px 20px;
+  padding: 65px 20px 100px;
 
   background-color: #f5eee4;
   color: #4b382f;
@@ -106,4 +109,93 @@
 .rsvp__form button:hover {
   background-color: #4b382f;
   color: #f5eee4;
+}
+
+/* телефон */
+
+@media (max-width: 767px) {
+    .rsvp__success {
+    padding: 40px 15px;
+  }
+
+  .rsvp__success h3 {
+    font-size: 32px;
+  }
+
+  .rsvp__success p {
+    font-size: 13px;
+  }
+  /* изменение высоты блока */
+  .rsvp {
+    margin-top: -30px;
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .rsvp__subtitle {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .rsvp__title {
+    font-size: clamp(48px, 15vw, 64px);
+  }
+
+  .rsvp__text {
+    margin: 25px 0 45px;
+
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .rsvp__form label {
+    margin-bottom: 8px;
+
+    font-size: 11px;
+  }
+
+  .rsvp__form input,
+  .rsvp__form select {
+    padding: 15px 0;
+    margin-bottom: 28px;
+
+    font-size: 14px;
+  }
+
+  .rsvp__form button {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ответ */
+
+.rsvp__success {
+  padding: 50px 20px;
+
+  border-top: 1px solid #d8c5ae;
+  border-bottom: 1px solid #d8c5ae;
+
+  text-align: center;
+}
+
+.rsvp__success h3 {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.rsvp__success p {
+  margin: 20px 0 0;
+
+  font-size: 14px;
+  line-height: 1.8;
 }

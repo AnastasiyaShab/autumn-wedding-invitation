@@ -64,3 +64,56 @@
   font-size: 14px;
   letter-spacing: 4px;
 }
+
+/* телефон */
+
+@media (max-width: 767px) {
+  .countdown {
+    min-height: auto;
+
+    padding: 80px 20px;
+  }
+
+  .countdown__subtitle {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .countdown__title {
+    font-size: clamp(48px, 15vw, 64px);
+  }
+
+  .countdown__timer {
+    width: 100%;
+
+    justify-content: center;
+    gap: 0;
+
+    margin-top: 50px;
+  }
+
+  .countdown__item {
+    width: 25%;
+    min-width: 0;
+  }
+
+  .countdown__item span {
+    font-size: clamp(38px, 12vw, 52px);
+  }
+
+  .countdown__item p {
+    margin-top: 10px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .countdown__date {
+    margin-top: 50px;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+}

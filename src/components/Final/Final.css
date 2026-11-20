@@ -109,3 +109,64 @@
   opacity: 0.6;
   transform: translateY(-2px);
 }
+
+/* телефон */
+
+@media (max-width: 767px) {
+  .final {
+    min-height: auto;
+
+    padding: 80px 20px 30px;
+  }
+
+  .final__subtitle {
+    margin-bottom: 25px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .final__title {
+    font-size: clamp(64px, 18vw, 82px);
+  }
+
+  .final__title span {
+    margin: 14px 0;
+
+    font-size: 34px;
+  }
+
+  .final__date {
+    margin-top: 35px;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+  }
+
+  .final__text {
+    margin-top: 30px;
+
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .final__footer {
+    margin-top: 80px;
+  }
+
+  .final__credit {
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .final__instagram {
+    width: 20px;
+    height: 20px;
+  }
+}

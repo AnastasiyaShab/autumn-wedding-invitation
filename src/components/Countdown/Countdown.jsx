@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Countdown.css";
 
+const weddingDate = new Date("2026-10-24T15:00:00");
+
 function Countdown() {
-  const weddingDate = new Date("2026-10-24T15:00:00");
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -43,7 +44,7 @@ function Countdown() {
 
   return (
     <section className="countdown">
-      <p className="countdown__subtitle">Save the date</p>
+      <p className="countdown__subtitle"></p>
 
       <h2 className="countdown__title">
         До нашего дня

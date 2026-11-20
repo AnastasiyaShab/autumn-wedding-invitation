@@ -4,20 +4,39 @@ import "./RSVP.css";
 function RSVP() {
   const [name, setName] = useState("");
   const [attendance, setAttendance] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log({
+    const response = {
       name,
       attendance,
-    });
+    };
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzV2EM0wqe72CKTBxN0dY0xNAx8fpg3FUqe146yniztuzHNhKIX1VBGou6YSirSTUpo/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify(response),
+        }
+      );
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Ошибка отправки:", error);
+    }
   };
 
   return (
     <section className="rsvp">
       <div className="rsvp__content">
-        <p className="rsvp__subtitle">RSVP</p>
+        <p className="rsvp__subtitle"></p>
 
         <h2 className="rsvp__title">
           Будете с нами?
@@ -29,52 +48,63 @@ function RSVP() {
           на нашем празднике.
         </p>
 
-        <form className="rsvp__form" onSubmit={handleSubmit}>
-          <label htmlFor="name">
-            Ваше имя
-          </label>
+        {isSubmitted ? (
+          <div className="rsvp__success">
+            <h3>Спасибо, что ответили 🤎</h3>
 
-          <input
-            id="name"
-            type="text"
-            placeholder="Имя и фамилия"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            required
-          />
+            <p>
+              Будем рады разделить
+              <br />
+              этот день вместе с вами.
+            </p>
+          </div>
+        ) : (
+          <form className="rsvp__form" onSubmit={handleSubmit}>
+            <label htmlFor="name">
+              Ваше имя
+            </label>
 
-          <label htmlFor="attendance">
-            Вы сможете присутствовать?
-          </label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Имя и фамилия"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              required
+            />
 
-          <select
-            id="attendance"
-            value={attendance}
-            onChange={(event) => setAttendance(event.target.value)}
-            required
-          >
-            <option value="">
-            Выберите вариант
-            </option>
+            <label htmlFor="attendance">
+              Вы сможете присутствовать?
+            </label>
 
-            <option value="yes">
-            Да, буду с вами
-            </option>
+            <select
+              id="attendance"
+              value={attendance}
+              onChange={(event) => setAttendance(event.target.value)}
+              required
+            >
+              <option value="">
+                Выберите вариант
+              </option>
 
-            <option value="no">
-            К сожалению, не смогу
-            </option>
+              <option value="yes">
+                Да, буду с вами
+              </option>
 
-            <option value="maybe">
-            Пока что не могу дать ответ
-            </option>
-            
-          </select>
+              <option value="no">
+                К сожалению, не смогу
+              </option>
 
-          <button type="submit">
-            Подтвердить
-          </button>
-        </form>
+              <option value="maybe">
+                Пока что не могу дать ответ
+              </option>
+            </select>
+
+            <button type="submit">
+              Подтвердить
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );

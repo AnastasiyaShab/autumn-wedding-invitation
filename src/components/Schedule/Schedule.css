@@ -69,3 +69,49 @@
   font-size: 14px;
   line-height: 1.8;
 }
+
+/* телефон */
+@media (max-width: 767px) {
+  .schedule {
+    min-height: auto;
+
+    padding: 80px 20px;
+  }
+
+  .schedule__header {
+    margin-bottom: 60px;
+  }
+
+  .schedule__subtitle {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .schedule__title {
+    font-size: clamp(48px, 15vw, 64px);
+  }
+
+  .schedule__item {
+    grid-template-columns: 65px 1fr;
+    gap: 20px;
+
+    padding: 28px 0;
+  }
+
+  .schedule__time {
+    font-size: 26px;
+  }
+
+  .schedule__event h3 {
+    margin-bottom: 8px;
+
+    font-size: 26px;
+  }
+
+  .schedule__event p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}

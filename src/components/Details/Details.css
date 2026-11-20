@@ -1,5 +1,5 @@
 .details {
-  min-height: 80vh;
+  min-height: auto;
 
   padding: 120px 60px;
 
@@ -58,14 +58,14 @@
   border-bottom: 1px solid #d8c5ae;
 }
 
-.details__number {
+/* .details__number {
   display: block;
 
   margin-bottom: 25px;
 
   font-size: 11px;
   letter-spacing: 3px;
-}
+} */
 
 .details__item h3 {
   margin: 0;
@@ -80,4 +80,60 @@
 
   font-size: 14px;
   line-height: 1.8;
+}
+
+/* телефон */
+
+@media (max-width: 767px) {
+  .details {
+    min-height: auto;
+
+    padding: 80px 20px;
+  }
+
+  .details__header {
+    margin-bottom: 60px;
+  }
+
+  .details__subtitle {
+    margin-bottom: 15px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .details__title {
+    font-size: clamp(48px, 15vw, 64px);
+  }
+
+  .details__intro {
+    margin-top: 25px;
+
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .details__list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+  .details__item {
+    padding: 35px 20px;
+  }
+
+  .details__item h3 {
+    font-size: 28px;
+  }
+
+  .details__item p {
+    margin-top: 15px;
+
+    font-size: 13px;
+    line-height: 1.8;
+  }
 }
